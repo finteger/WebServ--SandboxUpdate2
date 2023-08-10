@@ -3,55 +3,43 @@
 <head>
    <meta charset="utf-8">
    <title>Home Page</title>
+   <link rel="stylesheet" type="text/css" href="/css/form.css" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<body>
 
+<header>
+    <div class="container">
+        <form id="logout" action="/logout" method="POST" class="logout-form">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</header>
 
-<center>
+<div class="container">
+    <h3>Student Roster</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Attendance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Add student rows here -->
+        </tbody>
+    </table>
 
-    <form id="logout" action="/logout" method="POST">
-        <button type="submit">Logout</button>
+    <form id="add-student-form" action="/addstudent" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <button type="submit">Add</button>
     </form>
+</div>
 
-
-
-
-<h3>Student Roster</h3>
- <table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Attendance</th>
-        </tr>
-    </thead>
-
-<tbody>
-
-
-
-</table>
-
-
-</center>
-
-
-
-<form action="/addstudent" method="POST">
-
-    <label for="name">name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">email:</label>
-    <input type="text" id="email" name="email" required>
-
-    <button type="submit">Add</button>
-</form>
-
-
-
-
-
-
-
+</body>
 </html>
